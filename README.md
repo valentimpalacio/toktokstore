@@ -2,6 +2,17 @@
 
 Um e-commerce completo e profissional construído com React, Node.js, Express e PostgreSQL, com foco em escalabilidade e manutenibilidade.
 
+## 📸 Screenshots
+
+### Home Page
+![Home Page](screenshots/01-home.png)
+
+### Shop/Loja
+![Shop Page](screenshots/02-shop.png)
+
+### About Page
+![About Page](screenshots/03-about.png)
+
 ## 🌟 Características Implementadas
 
 ### Backend (Node.js/Express)

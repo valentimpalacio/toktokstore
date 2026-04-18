@@ -1,0 +1,636 @@
+2026-04-18 03:14:31 [ERROR]: Error occurred 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:39:20
+
+  36 const skip = (page - 1) * limit;
+  37 
+  38 const [products, total] = await Promise.all([
+→ 39   prisma.product.findMany({
+         where: {},
+         include: {
+           category: true,
+           _count: {
+             select: {
+               ratings: true,
+               ~~~~~~~
+       ?       orderItems?: true
+             }
+           }
+         },
+         skip: 0,
+         take: 12,
+         orderBy: {
+           createdAt: "desc"
+         }
+       })
+
+Unknown field `ratings` for select statement on model `ProductCountOutputType`. Available options are listed in green.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:14:31 [ERROR]: Error occurred 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:39:20
+
+  36 const skip = (page - 1) * limit;
+  37 
+  38 const [products, total] = await Promise.all([
+→ 39   prisma.product.findMany({
+         where: {},
+         include: {
+           category: true,
+           _count: {
+             select: {
+               ratings: true,
+               ~~~~~~~
+       ?       orderItems?: true
+             }
+           }
+         },
+         skip: 0,
+         take: 12,
+         orderBy: {
+           createdAt: "desc"
+         }
+       })
+
+Unknown field `ratings` for select statement on model `ProductCountOutputType`. Available options are listed in green.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:14:39 [ERROR]: Error occurred 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:39:20
+
+  36 const skip = (page - 1) * limit;
+  37 
+  38 const [products, total] = await Promise.all([
+→ 39   prisma.product.findMany({
+         where: {},
+         include: {
+           category: true,
+           _count: {
+             select: {
+               ratings: true,
+               ~~~~~~~
+       ?       orderItems?: true
+             }
+           }
+         },
+         skip: 0,
+         take: 12,
+         orderBy: {
+           createdAt: "desc"
+         }
+       })
+
+Unknown field `ratings` for select statement on model `ProductCountOutputType`. Available options are listed in green.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:14:39 [ERROR]: Error occurred 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:39:20
+
+  36 const skip = (page - 1) * limit;
+  37 
+  38 const [products, total] = await Promise.all([
+→ 39   prisma.product.findMany({
+         where: {},
+         include: {
+           category: true,
+           _count: {
+             select: {
+               ratings: true,
+               ~~~~~~~
+       ?       orderItems?: true
+             }
+           }
+         },
+         skip: 0,
+         take: 12,
+         orderBy: {
+           createdAt: "desc"
+         }
+       })
+
+Unknown field `ratings` for select statement on model `ProductCountOutputType`. Available options are listed in green.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:14:54 [ERROR]: Error occurred 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:39:20
+
+  36 const skip = (page - 1) * limit;
+  37 
+  38 const [products, total] = await Promise.all([
+→ 39   prisma.product.findMany({
+         where: {},
+         include: {
+           category: true,
+           _count: {
+             select: {
+               ratings: true,
+               ~~~~~~~
+       ?       orderItems?: true
+             }
+           }
+         },
+         skip: 0,
+         take: 12,
+         orderBy: {
+           createdAt: "desc"
+         }
+       })
+
+Unknown field `ratings` for select statement on model `ProductCountOutputType`. Available options are listed in green.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:14:54 [ERROR]: Error occurred 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:39:20
+
+  36 const skip = (page - 1) * limit;
+  37 
+  38 const [products, total] = await Promise.all([
+→ 39   prisma.product.findMany({
+         where: {},
+         include: {
+           category: true,
+           _count: {
+             select: {
+               ratings: true,
+               ~~~~~~~
+       ?       orderItems?: true
+             }
+           }
+         },
+         skip: 0,
+         take: 12,
+         orderBy: {
+           createdAt: "desc"
+         }
+       })
+
+Unknown field `ratings` for select statement on model `ProductCountOutputType`. Available options are listed in green.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:14:56 [ERROR]: Error occurred 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:39:20
+
+  36 const skip = (page - 1) * limit;
+  37 
+  38 const [products, total] = await Promise.all([
+→ 39   prisma.product.findMany({
+         where: {},
+         include: {
+           category: true,
+           _count: {
+             select: {
+               ratings: true,
+               ~~~~~~~
+       ?       orderItems?: true
+             }
+           }
+         },
+         skip: 0,
+         take: 12,
+         orderBy: {
+           createdAt: "desc"
+         }
+       })
+
+Unknown field `ratings` for select statement on model `ProductCountOutputType`. Available options are listed in green.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:14:57 [ERROR]: Error occurred 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:39:20
+
+  36 const skip = (page - 1) * limit;
+  37 
+  38 const [products, total] = await Promise.all([
+→ 39   prisma.product.findMany({
+         where: {},
+         include: {
+           category: true,
+           _count: {
+             select: {
+               ratings: true,
+               ~~~~~~~
+       ?       orderItems?: true
+             }
+           }
+         },
+         skip: 0,
+         take: 12,
+         orderBy: {
+           createdAt: "desc"
+         }
+       })
+
+Unknown field `ratings` for select statement on model `ProductCountOutputType`. Available options are listed in green.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:14:57 [ERROR]: Error occurred 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:39:20
+
+  36 const skip = (page - 1) * limit;
+  37 
+  38 const [products, total] = await Promise.all([
+→ 39   prisma.product.findMany({
+         where: {},
+         include: {
+           category: true,
+           _count: {
+             select: {
+               ratings: true,
+               ~~~~~~~
+       ?       orderItems?: true
+             }
+           }
+         },
+         skip: 0,
+         take: 12,
+         orderBy: {
+           createdAt: "desc"
+         }
+       })
+
+Unknown field `ratings` for select statement on model `ProductCountOutputType`. Available options are listed in green.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:15:00 [ERROR]: Error occurred 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:39:20
+
+  36 const skip = (page - 1) * limit;
+  37 
+  38 const [products, total] = await Promise.all([
+→ 39   prisma.product.findMany({
+         where: {},
+         include: {
+           category: true,
+           _count: {
+             select: {
+               ratings: true,
+               ~~~~~~~
+       ?       orderItems?: true
+             }
+           }
+         },
+         skip: 0,
+         take: 12,
+         orderBy: {
+           createdAt: "desc"
+         }
+       })
+
+Unknown field `ratings` for select statement on model `ProductCountOutputType`. Available options are listed in green.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:15:00 [ERROR]: Error occurred 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:39:20
+
+  36 const skip = (page - 1) * limit;
+  37 
+  38 const [products, total] = await Promise.all([
+→ 39   prisma.product.findMany({
+         where: {},
+         include: {
+           category: true,
+           _count: {
+             select: {
+               ratings: true,
+               ~~~~~~~
+       ?       orderItems?: true
+             }
+           }
+         },
+         skip: 0,
+         take: 12,
+         orderBy: {
+           createdAt: "desc"
+         }
+       })
+
+Unknown field `ratings` for select statement on model `ProductCountOutputType`. Available options are listed in green.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:15:01 [ERROR]: Error occurred 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:39:20
+
+  36 const skip = (page - 1) * limit;
+  37 
+  38 const [products, total] = await Promise.all([
+→ 39   prisma.product.findMany({
+         where: {},
+         include: {
+           category: true,
+           _count: {
+             select: {
+               ratings: true,
+               ~~~~~~~
+       ?       orderItems?: true
+             }
+           }
+         },
+         skip: 0,
+         take: 12,
+         orderBy: {
+           createdAt: "desc"
+         }
+       })
+
+Unknown field `ratings` for select statement on model `ProductCountOutputType`. Available options are listed in green.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:15:01 [ERROR]: Error occurred 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:39:20
+
+  36 const skip = (page - 1) * limit;
+  37 
+  38 const [products, total] = await Promise.all([
+→ 39   prisma.product.findMany({
+         where: {},
+         include: {
+           category: true,
+           _count: {
+             select: {
+               ratings: true,
+               ~~~~~~~
+       ?       orderItems?: true
+             }
+           }
+         },
+         skip: 0,
+         take: 12,
+         orderBy: {
+           createdAt: "desc"
+         }
+       })
+
+Unknown field `ratings` for select statement on model `ProductCountOutputType`. Available options are listed in green.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:15:03 [ERROR]: Error occurred 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:39:20
+
+  36 const skip = (page - 1) * limit;
+  37 
+  38 const [products, total] = await Promise.all([
+→ 39   prisma.product.findMany({
+         where: {},
+         include: {
+           category: true,
+           _count: {
+             select: {
+               ratings: true,
+               ~~~~~~~
+       ?       orderItems?: true
+             }
+           }
+         },
+         skip: 0,
+         take: 12,
+         orderBy: {
+           createdAt: "desc"
+         }
+       })
+
+Unknown field `ratings` for select statement on model `ProductCountOutputType`. Available options are listed in green.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:15:03 [ERROR]: Error occurred 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:39:20
+
+  36 const skip = (page - 1) * limit;
+  37 
+  38 const [products, total] = await Promise.all([
+→ 39   prisma.product.findMany({
+         where: {},
+         include: {
+           category: true,
+           _count: {
+             select: {
+               ratings: true,
+               ~~~~~~~
+       ?       orderItems?: true
+             }
+           }
+         },
+         skip: 0,
+         take: 12,
+         orderBy: {
+           createdAt: "desc"
+         }
+       })
+
+Unknown field `ratings` for select statement on model `ProductCountOutputType`. Available options are listed in green.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:23:08 [ERROR]: Error occurred 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:39:20
+
+  36 const skip = (page - 1) * limit;
+  37 
+  38 const [products, total] = await Promise.all([
+→ 39   prisma.product.findMany({
+         where: {},
+         include: {
+           category: true,
+           _count: {
+             select: {
+               ratings: true,
+               ~~~~~~~
+       ?       orderItems?: true
+             }
+           }
+         },
+         skip: 0,
+         take: 12,
+         orderBy: {
+           createdAt: "desc"
+         }
+       })
+
+Unknown field `ratings` for select statement on model `ProductCountOutputType`. Available options are listed in green.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:23:08 [ERROR]: Error occurred 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:39:20
+
+  36 const skip = (page - 1) * limit;
+  37 
+  38 const [products, total] = await Promise.all([
+→ 39   prisma.product.findMany({
+         where: {},
+         include: {
+           category: true,
+           _count: {
+             select: {
+               ratings: true,
+               ~~~~~~~
+       ?       orderItems?: true
+             }
+           }
+         },
+         skip: 0,
+         take: 12,
+         orderBy: {
+           createdAt: "desc"
+         }
+       })
+
+Unknown field `ratings` for select statement on model `ProductCountOutputType`. Available options are listed in green.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:24:39 [ERROR]: Error occurred 
+Invalid `prisma.rating.aggregate()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:68:47
+
+  65 // Get average ratings and count
+  66 const productsWithRatings = await Promise.all(
+  67   products.map(async (product) => {
+→ 68     const ratingStats = await prisma.rating.aggregate(
+Operation 'aggregate' for model 'Rating' does not match any query.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:24:40 [ERROR]: Error occurred 
+Invalid `prisma.rating.aggregate()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:68:47
+
+  65 // Get average ratings and count
+  66 const productsWithRatings = await Promise.all(
+  67   products.map(async (product) => {
+→ 68     const ratingStats = await prisma.rating.aggregate(
+Operation 'aggregate' for model 'Rating' does not match any query.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:24:50 [ERROR]: Error occurred 
+Invalid `prisma.rating.aggregate()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:68:47
+
+  65 // Get average ratings and count
+  66 const productsWithRatings = await Promise.all(
+  67   products.map(async (product) => {
+→ 68     const ratingStats = await prisma.rating.aggregate(
+Operation 'aggregate' for model 'Rating' does not match any query.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:24:51 [ERROR]: Error occurred 
+Invalid `prisma.rating.aggregate()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:68:47
+
+  65 // Get average ratings and count
+  66 const productsWithRatings = await Promise.all(
+  67   products.map(async (product) => {
+→ 68     const ratingStats = await prisma.rating.aggregate(
+Operation 'aggregate' for model 'Rating' does not match any query.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:24:51 [ERROR]: Error occurred 
+Invalid `prisma.rating.aggregate()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:68:47
+
+  65 // Get average ratings and count
+  66 const productsWithRatings = await Promise.all(
+  67   products.map(async (product) => {
+→ 68     const ratingStats = await prisma.rating.aggregate(
+Operation 'aggregate' for model 'Rating' does not match any query.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:24:52 [ERROR]: Error occurred 
+Invalid `prisma.rating.aggregate()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:68:47
+
+  65 // Get average ratings and count
+  66 const productsWithRatings = await Promise.all(
+  67   products.map(async (product) => {
+→ 68     const ratingStats = await prisma.rating.aggregate(
+Operation 'aggregate' for model 'Rating' does not match any query.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:24:53 [ERROR]: Error occurred 
+Invalid `prisma.rating.aggregate()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:68:47
+
+  65 // Get average ratings and count
+  66 const productsWithRatings = await Promise.all(
+  67   products.map(async (product) => {
+→ 68     const ratingStats = await prisma.rating.aggregate(
+Operation 'aggregate' for model 'Rating' does not match any query.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:24:53 [ERROR]: Error occurred 
+Invalid `prisma.rating.aggregate()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:68:47
+
+  65 // Get average ratings and count
+  66 const productsWithRatings = await Promise.all(
+  67   products.map(async (product) => {
+→ 68     const ratingStats = await prisma.rating.aggregate(
+Operation 'aggregate' for model 'Rating' does not match any query.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:25:33 [ERROR]: Error occurred 
+Invalid `prisma.rating.aggregate()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:68:47
+
+  65 // Get average ratings and count
+  66 const productsWithRatings = await Promise.all(
+  67   products.map(async (product) => {
+→ 68     const ratingStats = await prisma.rating.aggregate(
+Operation 'aggregate' for model 'Rating' does not match any query.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:25:34 [ERROR]: Error occurred 
+Invalid `prisma.rating.aggregate()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:68:47
+
+  65 // Get average ratings and count
+  66 const productsWithRatings = await Promise.all(
+  67   products.map(async (product) => {
+→ 68     const ratingStats = await prisma.rating.aggregate(
+Operation 'aggregate' for model 'Rating' does not match any query.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:25:34 [ERROR]: Error occurred 
+Invalid `prisma.rating.aggregate()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:68:47
+
+  65 // Get average ratings and count
+  66 const productsWithRatings = await Promise.all(
+  67   products.map(async (product) => {
+→ 68     const ratingStats = await prisma.rating.aggregate(
+Operation 'aggregate' for model 'Rating' does not match any query.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:25:35 [ERROR]: Error occurred 
+Invalid `prisma.rating.aggregate()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:68:47
+
+  65 // Get average ratings and count
+  66 const productsWithRatings = await Promise.all(
+  67   products.map(async (product) => {
+→ 68     const ratingStats = await prisma.rating.aggregate(
+Operation 'aggregate' for model 'Rating' does not match any query.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:25:36 [ERROR]: Error occurred 
+Invalid `prisma.rating.aggregate()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:68:47
+
+  65 // Get average ratings and count
+  66 const productsWithRatings = await Promise.all(
+  67   products.map(async (product) => {
+→ 68     const ratingStats = await prisma.rating.aggregate(
+Operation 'aggregate' for model 'Rating' does not match any query.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:25:36 [ERROR]: Error occurred 
+Invalid `prisma.rating.aggregate()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:68:47
+
+  65 // Get average ratings and count
+  66 const productsWithRatings = await Promise.all(
+  67   products.map(async (product) => {
+→ 68     const ratingStats = await prisma.rating.aggregate(
+Operation 'aggregate' for model 'Rating' does not match any query.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:26:26 [ERROR]: Error occurred 
+Invalid `prisma.rating.aggregate()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:68:47
+
+  65 // Get average ratings and count
+  66 const productsWithRatings = await Promise.all(
+  67   products.map(async (product) => {
+→ 68     const ratingStats = await prisma.rating.aggregate(
+Operation 'aggregate' for model 'Rating' does not match any query.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}
+2026-04-18 03:26:51 [ERROR]: Error occurred 
+Invalid `prisma.rating.count()` invocation in
+C:\Users\valen\Downloads\projeto-react\server\src\controllers\product.controller.js:69:23
+
+  66 const productsWithRatings = await Promise.all(
+  67   products.map(async (product) => {
+  68     const [ratingCount, avgRating] = await Promise.all([
+→ 69       prisma.rating.count(
+Operation 'aggregate' for model 'Rating' does not match any query.
+Metadata: {"statusCode":500,"path":"/api/products","method":"GET"}

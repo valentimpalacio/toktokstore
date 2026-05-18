@@ -67,11 +67,13 @@ app.use((req, res) => {
 
 // Error handler
 app.use((err, req, res, next) => {
-  console.error(err);
+  console.error('Error details:', err.message);
+  console.error('Error stack:', err.stack);
+  console.error('Error code:', err.code);
   res.status(500).json({
     success: false,
-    message: 'Internal server error',
-    code: 'INTERNAL_ERROR'
+    message: err.message || 'Internal server error',
+    code: err.code || 'INTERNAL_ERROR'
   });
 });
 

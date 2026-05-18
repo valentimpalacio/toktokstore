@@ -5,6 +5,7 @@ import { ArrowLeft, ShoppingCart, Star, Truck, Shield, RotateCcw, Package } from
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 import { useToast } from '../context/ToastContext';
+import { useLanguage } from '../context/LanguageContext';
 import api from '../api/api';
 
 const ProductDetail = () => {
@@ -13,6 +14,7 @@ const ProductDetail = () => {
   const { user } = useAuth();
   const { addItem } = useCart();
   const { addToast } = useToast();
+  const { t } = useLanguage();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [imageError, setImageError] = useState(false);
@@ -39,11 +41,10 @@ const ProductDetail = () => {
         onClick={() => navigate(-1)}
         className="flex items-center gap-2 text-text-muted hover:text-primary mb-8 transition-colors"
       >
-        <ArrowLeft size={20} /> Back
+        <ArrowLeft size={20} /> {t('product_detail.back')}
       </button>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {/* Image */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
@@ -65,7 +66,6 @@ const ProductDetail = () => {
           </div>
         </motion.div>
 
-        {/* Info */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
@@ -73,7 +73,7 @@ const ProductDetail = () => {
         >
           <div>
             <p className="text-sm text-secondary font-bold uppercase tracking-widest mb-2">
-              {product.category?.name || 'Technology'}
+              {product.category?.name || t('product.technology')}
             </p>
             <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight">{product.name}</h1>
             <div className="flex items-center gap-3 mb-4">
@@ -82,7 +82,7 @@ const ProductDetail = () => {
                   <Star key={i} size={16} fill="currentColor" />
                 ))}
               </div>
-              <span className="text-text-muted text-sm">(4.9) · {product.stock} in stock</span>
+              <span className="text-text-muted text-sm">(4.9) · {product.stock} {t('product_detail.in_stock')}</span>
             </div>
           </div>
 
@@ -93,15 +93,15 @@ const ProductDetail = () => {
           <div className="grid grid-cols-3 gap-4 py-4">
             <div className="flex flex-col items-center gap-2 text-center">
               <Truck size={24} className="text-primary" />
-              <span className="text-xs text-text-muted">Free Shipping</span>
+              <span className="text-xs text-text-muted">{t('product_detail.free_shipping')}</span>
             </div>
             <div className="flex flex-col items-center gap-2 text-center">
               <Shield size={24} className="text-primary" />
-              <span className="text-xs text-text-muted">2 Year Warranty</span>
+              <span className="text-xs text-text-muted">{t('product_detail.warranty')}</span>
             </div>
             <div className="flex flex-col items-center gap-2 text-center">
               <RotateCcw size={24} className="text-primary" />
-              <span className="text-xs text-text-muted">30-Day Return</span>
+              <span className="text-xs text-text-muted">{t('product_detail.return_policy')}</span>
             </div>
           </div>
 
@@ -109,17 +109,16 @@ const ProductDetail = () => {
             <button
               onClick={() => {
                 addItem(product);
-                addToast(`${product.name} added to cart`, 'success');
+                addToast(`${product.name} ${t('product_detail.added_to_cart')}`, 'success');
               }}
               className="btn-primary flex-1 py-4 flex-center gap-2"
             >
-              <ShoppingCart size={20} /> Add to Cart
+              <ShoppingCart size={20} /> {t('product_detail.add_to_cart')}
             </button>
           </div>
         </motion.div>
       </div>
 
-      {/* Related Products */}
       <RelatedProducts currentId={id} categoryId={product.categoryId} />
     </div>
   );
@@ -127,6 +126,7 @@ const ProductDetail = () => {
 
 function RelatedProducts({ currentId, categoryId }) {
   const [products, setProducts] = React.useState([]);
+  const { t } = useLanguage();
 
   React.useEffect(() => {
     api
@@ -139,7 +139,7 @@ function RelatedProducts({ currentId, categoryId }) {
   return (
     <section className="mt-24">
       <h2 className="text-2xl font-bold mb-8">
-        You Might Also <span className="premium-gradient">Like</span>
+        {t('product_detail.related_title')} <span className="premium-gradient">{t('product_detail.related_gradient')}</span>
       </h2>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
         {products.map((product) => (

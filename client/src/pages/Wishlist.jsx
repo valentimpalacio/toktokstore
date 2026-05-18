@@ -4,11 +4,13 @@ import { Heart, ShoppingCart, AlertCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import APIServices from '../services/api.service';
 import { formatPrice } from '../utils/formatters';
+import { useLanguage } from '../context/LanguageContext';
 
 export const Wishlist = () => {
   const [wishlist, setWishlist] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     loadWishlist();
@@ -40,7 +42,7 @@ export const Wishlist = () => {
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4" />
-          <p className="text-gray-600">Carregando wishlist...</p>
+          <p className="text-gray-600">{t('wishlist.loading')}</p>
         </div>
       </div>
     );
@@ -63,9 +65,9 @@ export const Wishlist = () => {
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-gray-900 flex items-center gap-3">
             <Heart className="w-10 h-10 text-red-500 fill-red-500" />
-            Minha Wishlist
+            {t('wishlist.title')}
           </h1>
-          <p className="text-gray-600 mt-2">{wishlist.length} produto{wishlist.length !== 1 ? 's' : ''}</p>
+          <p className="text-gray-600 mt-2">{wishlist.length} {wishlist.length !== 1 ? t('wishlist.count_plural') : t('wishlist.count')}</p>
         </div>
 
         {wishlist.length === 0 ? (
@@ -75,13 +77,13 @@ export const Wishlist = () => {
             className="bg-white rounded-lg shadow-lg p-12 text-center"
           >
             <Heart className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-            <h2 className="text-2xl font-semibold text-gray-900 mb-2">Sua wishlist está vazia</h2>
-            <p className="text-gray-600 mb-6">Comece adicionando produtos que você gostaria de comprar</p>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-2">{t('wishlist.empty_title')}</h2>
+            <p className="text-gray-600 mb-6">{t('wishlist.empty_desc')}</p>
             <Link
               to="/shop"
               className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
             >
-              Explorar Produtos
+              {t('wishlist.explore')}
             </Link>
           </motion.div>
         ) : (
@@ -119,7 +121,7 @@ export const Wishlist = () => {
                     <span className={`text-xs px-2 py-1 rounded ${
                       product.stock > 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
                     }`}>
-                      {product.stock > 0 ? 'Em estoque' : 'Fora de estoque'}
+                      {product.stock > 0 ? t('wishlist.in_stock') : t('wishlist.out_of_stock')}
                     </span>
                   </div>
 
@@ -128,14 +130,14 @@ export const Wishlist = () => {
                       to={`/product/${product.id}`}
                       className="flex-1 bg-gray-100 text-gray-900 py-2 rounded text-center font-medium hover:bg-gray-200 transition text-sm"
                     >
-                      Ver Detalhes
+                      {t('wishlist.details')}
                     </Link>
                     <button
                       disabled={product.stock === 0}
                       className="flex-1 bg-blue-600 text-white py-2 rounded font-medium hover:bg-blue-700 transition text-sm disabled:opacity-50 flex items-center justify-center gap-2"
                     >
                       <ShoppingCart className="w-4 h-4" />
-                      Comprar
+                      {t('wishlist.buy')}
                     </button>
                   </div>
                 </div>

@@ -6,7 +6,8 @@ export const translations = {
       about: "About",
       cart: "Cart",
       login: "Login",
-      register: "Register"
+      register: "Register",
+      logout: "Logout"
     },
     hero: {
       future: "THE FUTURE OF SHOPPING",
@@ -60,6 +61,68 @@ export const translations = {
       loading: "Loading...",
       error: "An error occurred",
       back: "Back"
+    },
+    about: {
+      title: "About",
+      subtitle: "We are a premium technology e-commerce platform dedicated to bringing you the most innovative and high-quality gadgets from around the world.",
+      mission_title: "Our Mission",
+      mission_p1: "Founded in 2024, ToktokStore was born from a simple idea: make premium technology accessible to everyone. We believe that cutting-edge gadgets shouldn't be complicated or overpriced.",
+      mission_p2: "Our team of tech enthusiasts carefully selects each product, ensuring it meets our high standards for quality, design, and innovation. From smartphones to smartwatches, we've got your digital life covered.",
+      why_title: "Why Choose Us",
+      val1_title: "Innovation First",
+      val1_desc: "We curate the latest technology to keep you ahead of the curve.",
+      val2_title: "Quality Guaranteed",
+      val2_desc: "Every product is tested and verified before reaching your hands.",
+      val3_title: "Fast Delivery",
+      val3_desc: "Free shipping on all orders with tracked delivery.",
+      val4_title: "Customer Love",
+      val4_desc: "24/7 support team ready to help with anything you need.",
+      cta_title: "Ready to Explore?",
+      cta_desc: "Check out our collection of premium gadgets and find your next favorite tech.",
+      cta_btn: "Visit Shop"
+    },
+    cart: {
+      title: "Shopping",
+      title_gradient: "Cart",
+      empty_title: "Your Cart is Empty",
+      empty_desc: "Looks like you haven't added anything to your cart yet. Explore our products and find something you love!",
+      browse: "Browse Products",
+      summary: "Order Summary",
+      subtotal: "Subtotal",
+      shipping: "Shipping",
+      free: "Free",
+      total: "Total",
+      place_order: "Place Order",
+      placing: "Placing Order...",
+      clear: "Clear Cart",
+      removed: "removed",
+      login_to_order: "Please log in to place an order",
+      order_success: "Order placed successfully!",
+      order_failed: "Failed to place order"
+    },
+    product_detail: {
+      back: "Back",
+      in_stock: "in stock",
+      free_shipping: "Free Shipping",
+      warranty: "2 Year Warranty",
+      return_policy: "30-Day Return",
+      add_to_cart: "Add to Cart",
+      added_to_cart: "added to cart",
+      related_title: "You Might Also",
+      related_gradient: "Like"
+    },
+    wishlist: {
+      title: "My Wishlist",
+      count: "product",
+      count_plural: "products",
+      loading: "Loading wishlist...",
+      empty_title: "Your wishlist is empty",
+      empty_desc: "Start adding products you'd like to buy",
+      explore: "Explore Products",
+      in_stock: "In stock",
+      out_of_stock: "Out of stock",
+      details: "View Details",
+      buy: "Buy"
     }
   },
   pt: {
@@ -69,7 +132,8 @@ export const translations = {
       about: "Sobre",
       cart: "Carrinho",
       login: "Entrar",
-      register: "Cadastrar"
+      register: "Cadastrar",
+      logout: "Sair"
     },
     hero: {
       future: "O FUTURO DAS COMPRAS",
@@ -123,6 +187,68 @@ export const translations = {
       loading: "Carregando...",
       error: "Ocorreu um erro",
       back: "Voltar"
+    },
+    about: {
+      title: "Sobre",
+      subtitle: "Somos uma plataforma premium de e-commerce de tecnologia dedicada a trazer os gadgets mais inovadores e de alta qualidade de todo o mundo.",
+      mission_title: "Nossa Missão",
+      mission_p1: "Fundada em 2024, a ToktokStore nasceu de uma ideia simples: tornar a tecnologia premium acessível a todos. Acreditamos que gadgets de ponta não devem ser complicados ou caros demais.",
+      mission_p2: "Nossa equipe de entusiastas de tecnologia seleciona cuidadosamente cada produto, garantindo que atenda aos nossos altos padrões de qualidade, design e inovação. De smartphones a smartwatches, cobrimos sua vida digital.",
+      why_title: "Por que nos escolher",
+      val1_title: "Inovação Primeiro",
+      val1_desc: "Selecionamos as tecnologias mais recentes para mantê-lo à frente.",
+      val2_title: "Qualidade Garantida",
+      val2_desc: "Cada produto é testado e verificado antes de chegar às suas mãos.",
+      val3_title: "Entrega Rápida",
+      val3_desc: "Frete grátis em todos os pedidos com entrega rastreada.",
+      val4_title: "Amor ao Cliente",
+      val4_desc: "Equipe de suporte 24/7 pronta para ajudar com o que precisar.",
+      cta_title: "Pronto para Explorar?",
+      cta_desc: "Confira nossa coleção de gadgets premium e encontre seu próximo tech favorito.",
+      cta_btn: "Visitar Loja"
+    },
+    cart: {
+      title: "Carrinho de",
+      title_gradient: "Compras",
+      empty_title: "Seu Carrinho está Vazio",
+      empty_desc: "Parece que você ainda não adicionou nada ao seu carrinho. Explore nossos produtos e encontre algo que você adore!",
+      browse: "Explorar Produtos",
+      summary: "Resumo do Pedido",
+      subtotal: "Subtotal",
+      shipping: "Entrega",
+      free: "Grátis",
+      total: "Total",
+      place_order: "Finalizar Pedido",
+      placing: "Processando...",
+      clear: "Limpar Carrinho",
+      removed: "removido",
+      login_to_order: "Faça login para fazer um pedido",
+      order_success: "Pedido realizado com sucesso!",
+      order_failed: "Falha ao realizar pedido"
+    },
+    product_detail: {
+      back: "Voltar",
+      in_stock: "em estoque",
+      free_shipping: "Frete Grátis",
+      warranty: "Garantia de 2 Anos",
+      return_policy: "Devolução em 30 Dias",
+      add_to_cart: "Adicionar ao Carrinho",
+      added_to_cart: "adicionado ao carrinho",
+      related_title: "Você Também Pode",
+      related_gradient: "Gostar"
+    },
+    wishlist: {
+      title: "Minha Wishlist",
+      count: "produto",
+      count_plural: "produtos",
+      loading: "Carregando wishlist...",
+      empty_title: "Sua wishlist está vazia",
+      empty_desc: "Comece adicionando produtos que você gostaria de comprar",
+      explore: "Explorar Produtos",
+      in_stock: "Em estoque",
+      out_of_stock: "Fora de estoque",
+      details: "Ver Detalhes",
+      buy: "Comprar"
     }
   },
   es: {
@@ -132,7 +258,8 @@ export const translations = {
       about: "Nosotros",
       cart: "Carrito",
       login: "Iniciar Sesión",
-      register: "Registrarse"
+      register: "Registrarse",
+      logout: "Cerrar Sesión"
     },
     hero: {
       future: "EL FUTURO DE LAS COMPRAS",
@@ -186,6 +313,68 @@ export const translations = {
       loading: "Cargando...",
       error: "Ocurrió un error",
       back: "Volver"
+    },
+    about: {
+      title: "Sobre",
+      subtitle: "Somos una plataforma premium de comercio electrónico de tecnología dedicada a traerte los gadgets más innovadores y de alta calidad de todo el mundo.",
+      mission_title: "Nuestra Misión",
+      mission_p1: "Fundada en 2024, ToktokStore nació de una idea simple: hacer que la tecnología premium sea accesible para todos. Creemos que los gadgets de vanguardia no deben ser complicados ni demasiado caros.",
+      mission_p2: "Nuestro equipo de entusiastas de la tecnología selecciona cuidadosamente cada producto, asegurando que cumpla con nuestros altos estándares de calidad, diseño e innovación. Desde smartphones hasta smartwatches, cubrimos tu vida digital.",
+      why_title: "Por qué elegirnos",
+      val1_title: "Innovación Primero",
+      val1_desc: "Seleccionamos las últimas tecnologías para mantenerte a la vanguardia.",
+      val2_title: "Calidad Garantizada",
+      val2_desc: "Cada producto es probado y verificado antes de llegar a tus manos.",
+      val3_title: "Entrega Rápida",
+      val3_desc: "Envío gratuito en todos los pedidos con entrega rastreada.",
+      val4_title: "Amor al Cliente",
+      val4_desc: "Equipo de soporte 24/7 listo para ayudarte con lo que necesites.",
+      cta_title: "¿Listo para Explorar?",
+      cta_desc: "Descubre nuestra colección de gadgets premium y encuentra tu próximo tech favorito.",
+      cta_btn: "Visitar Tienda"
+    },
+    cart: {
+      title: "Carrito de",
+      title_gradient: "Compras",
+      empty_title: "Tu Carrito está Vacío",
+      empty_desc: "Parece que aún no has agregado nada a tu carrito. ¡Explora nuestros productos y encuentra algo que te encante!",
+      browse: "Explorar Productos",
+      summary: "Resumen del Pedido",
+      subtotal: "Subtotal",
+      shipping: "Envío",
+      free: "Gratis",
+      total: "Total",
+      place_order: "Realizar Pedido",
+      placing: "Procesando...",
+      clear: "Vaciar Carrito",
+      removed: "eliminado",
+      login_to_order: "Inicia sesión para realizar un pedido",
+      order_success: "¡Pedido realizado con éxito!",
+      order_failed: "Error al realizar el pedido"
+    },
+    product_detail: {
+      back: "Volver",
+      in_stock: "en stock",
+      free_shipping: "Envío Gratis",
+      warranty: "Garantía de 2 Años",
+      return_policy: "Devolución en 30 Días",
+      add_to_cart: "Añadir al Carrito",
+      added_to_cart: "añadido al carrito",
+      related_title: "También Te Puede",
+      related_gradient: "Interesar"
+    },
+    wishlist: {
+      title: "Mi Wishlist",
+      count: "producto",
+      count_plural: "productos",
+      loading: "Cargando wishlist...",
+      empty_title: "Tu wishlist está vacía",
+      empty_desc: "Comienza agregando productos que te gustaría comprar",
+      explore: "Explorar Productos",
+      in_stock: "En stock",
+      out_of_stock: "Agotado",
+      details: "Ver Detalles",
+      buy: "Comprar"
     }
   }
 };

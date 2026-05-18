@@ -5,19 +5,21 @@ import { Trash2, Plus, Minus, ShoppingBag, ArrowRight } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
+import { useLanguage } from '../context/LanguageContext';
 import api from '../api/api';
 
 const Cart = () => {
   const { items, removeItem, updateQuantity, clearCart, total, count } = useCart();
   const { user } = useAuth();
   const { addToast } = useToast();
+  const { t } = useLanguage();
   const navigate = useNavigate();
   const [placing, setPlacing] = React.useState(false);
 
   const handleCheckout = async () => {
     if (!user) {
       navigate('/login');
-      addToast('Please log in to place an order', 'info');
+      addToast(t('cart.login_to_order'), 'info');
       return;
     }
     setPlacing(true);
@@ -27,10 +29,10 @@ const Cart = () => {
         total,
       });
       clearCart();
-      addToast('Order placed successfully!', 'success');
+      addToast(t('cart.order_success'), 'success');
       navigate('/');
     } catch (err) {
-      addToast(err.response?.data?.message || 'Failed to place order', 'error');
+      addToast(err.response?.data?.message || t('cart.order_failed'), 'error');
     } finally {
       setPlacing(false);
     }
@@ -45,10 +47,10 @@ const Cart = () => {
           className="text-center"
         >
           <ShoppingBag size={64} className="mx-auto text-text-muted mb-6" />
-          <h1 className="text-4xl font-bold mb-4">Your Cart is Empty</h1>
-          <p className="text-text-muted mb-8 max-w-md">Looks like you haven't added anything to your cart yet. Explore our products and find something you love!</p>
+          <h1 className="text-4xl font-bold mb-4">{t('cart.empty_title')}</h1>
+          <p className="text-text-muted mb-8 max-w-md">{t('cart.empty_desc')}</p>
           <Link to="/shop" className="btn-primary inline-flex items-center gap-2 px-8 py-4">
-            Browse Products <ArrowRight size={20} />
+            {t('cart.browse')} <ArrowRight size={20} />
           </Link>
         </motion.div>
       </div>
@@ -57,10 +59,9 @@ const Cart = () => {
 
   return (
     <div className="container py-8">
-      <h1 className="text-4xl font-bold mb-8">Shopping <span className="premium-gradient">Cart</span></h1>
+      <h1 className="text-4xl font-bold mb-8">{t('cart.title')} <span className="premium-gradient">{t('cart.title_gradient')}</span></h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Items */}
         <div className="lg:col-span-2 space-y-4">
           <AnimatePresence>
             {items.map(item => (
@@ -98,7 +99,7 @@ const Cart = () => {
                 <button
                   onClick={() => {
                     removeItem(item.id);
-                    addToast(`${item.name} removed`, 'info');
+                    addToast(`${item.name} ${t('cart.removed')}`, 'info');
                   }}
                   className="text-text-muted hover:text-red-500 transition-colors p-2"
                 >
@@ -109,21 +110,20 @@ const Cart = () => {
           </AnimatePresence>
         </div>
 
-        {/* Summary */}
         <div className="lg:col-span-1">
           <div className="glass rounded-2xl p-8 sticky top-28">
-            <h2 className="text-xl font-bold mb-6">Order Summary</h2>
+            <h2 className="text-xl font-bold mb-6">{t('cart.summary')}</h2>
             <div className="space-y-3 mb-6">
               <div className="flex justify-between text-text-muted">
-                <span>Subtotal ({count} items)</span>
+                <span>{t('cart.subtotal')} ({count} items)</span>
                 <span>${total.toFixed(2)}</span>
               </div>
               <div className="flex justify-between text-text-muted">
-                <span>Shipping</span>
-                <span className="text-emerald-400">Free</span>
+                <span>{t('cart.shipping')}</span>
+                <span className="text-emerald-400">{t('cart.free')}</span>
               </div>
               <div className="border-t border-white/10 pt-3 flex justify-between text-lg font-bold">
-                <span>Total</span>
+                <span>{t('cart.total')}</span>
                 <span>${total.toFixed(2)}</span>
               </div>
             </div>
@@ -132,13 +132,13 @@ const Cart = () => {
               disabled={placing}
               className="w-full btn-primary py-4 disabled:opacity-50"
             >
-              {placing ? 'Placing Order...' : 'Place Order'}
+              {placing ? t('cart.placing') : t('cart.place_order')}
             </button>
             <button
               onClick={clearCart}
               className="w-full text-text-muted hover:text-red-400 text-sm mt-3 transition-colors"
             >
-              Clear Cart
+              {t('cart.clear')}
             </button>
           </div>
         </div>

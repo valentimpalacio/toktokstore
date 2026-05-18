@@ -2,13 +2,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Rocket, Shield, Zap, Heart } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const About = () => {
+  const { t } = useLanguage();
+
   const values = [
-    { icon: Rocket, title: 'Innovation First', desc: 'We curate the latest technology to keep you ahead of the curve.' },
-    { icon: Shield, title: 'Quality Guaranteed', desc: 'Every product is tested and verified before reaching your hands.' },
-    { icon: Zap, title: 'Fast Delivery', desc: 'Free shipping on all orders with tracked delivery.' },
-    { icon: Heart, title: 'Customer Love', desc: '24/7 support team ready to help with anything you need.' },
+    { icon: Rocket, title: t('about.val1_title'), desc: t('about.val1_desc') },
+    { icon: Shield, title: t('about.val2_title'), desc: t('about.val2_desc') },
+    { icon: Zap, title: t('about.val3_title'), desc: t('about.val3_desc') },
+    { icon: Heart, title: t('about.val4_title'), desc: t('about.val4_desc') },
   ];
 
   return (
@@ -24,11 +27,10 @@ const About = () => {
           className="container text-center"
         >
           <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-            About <span className="premium-gradient">ToktokStore</span>
+            {t('about.title')} <span className="premium-gradient">ToktokStore</span>
           </h1>
           <p className="text-xl text-text-muted max-w-2xl mx-auto">
-            We are a premium technology e-commerce platform dedicated to bringing you the most innovative
-            and high-quality gadgets from around the world.
+            {t('about.subtitle')}
           </p>
         </motion.div>
       </section>
@@ -52,14 +54,12 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-6">Our <span className="premium-gradient">Mission</span></h2>
+            <h2 className="text-4xl font-bold mb-6">{t('about.mission_title')}</h2>
             <p className="text-text-muted leading-relaxed mb-4">
-              Founded in 2024, ToktokStore was born from a simple idea: make premium technology accessible to everyone.
-              We believe that cutting-edge gadgets shouldn't be complicated or overpriced.
+              {t('about.mission_p1')}
             </p>
             <p className="text-text-muted leading-relaxed">
-              Our team of tech enthusiasts carefully selects each product, ensuring it meets our high standards
-              for quality, design, and innovation. From smartphones to smartwatches, we've got your digital life covered.
+              {t('about.mission_p2')}
             </p>
           </motion.div>
         </div>
@@ -67,7 +67,7 @@ const About = () => {
 
       {/* Values */}
       <section className="container my-20">
-        <h2 className="text-4xl font-bold text-center mb-12">Why Choose <span className="premium-gradient">Us</span></h2>
+        <h2 className="text-4xl font-bold text-center mb-12">{t('about.why_title')} <span className="premium-gradient">Us</span></h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {values.map((val, i) => (
             <motion.div
@@ -89,10 +89,10 @@ const About = () => {
       {/* CTA */}
       <section className="container my-20">
         <div className="glass rounded-[40px] p-12 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to <span className="premium-gradient">Explore</span>?</h2>
-          <p className="text-text-muted mb-8 max-w-md mx-auto">Check out our collection of premium gadgets and find your next favorite tech.</p>
+          <h2 className="text-3xl font-bold mb-4">{t('about.cta_title')}</h2>
+          <p className="text-text-muted mb-8 max-w-md mx-auto">{t('about.cta_desc')}</p>
           <Link to="/shop" className="btn-primary inline-flex items-center gap-2 px-10 py-4">
-            Visit Shop
+            {t('about.cta_btn')}
           </Link>
         </div>
       </section>

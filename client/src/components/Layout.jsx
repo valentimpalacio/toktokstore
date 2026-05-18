@@ -1,8 +1,11 @@
 import React from 'react';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 
 const Layout = ({ children }) => {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -14,19 +17,19 @@ const Layout = ({ children }) => {
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-xl font-bold mb-4 tracking-tight">TOKTOK<span className="premium-gradient">STORE</span></h3>
             <p className="text-text-muted max-w-sm">
-              Discover the next generation of electronics with our curated selection of premium gadgets and tech.
+              {t('footer.desc')}
             </p>
           </div>
           <div>
-            <h4 className="font-bold mb-4">Quick Links</h4>
+            <h4 className="font-bold mb-4">{t('footer.quick_links')}</h4>
             <ul className="flex flex-col gap-2 text-text-muted">
-              <li><Link to="/" className="hover:text-primary">Home</Link></li>
-              <li><Link to="/shop" className="hover:text-primary">Shop</Link></li>
-              <li><Link to="/cart" className="hover:text-primary">Cart</Link></li>
+              <li><Link to="/" className="hover:text-primary">{t('nav.home')}</Link></li>
+              <li><Link to="/shop" className="hover:text-primary">{t('nav.shop')}</Link></li>
+              <li><Link to="/cart" className="hover:text-primary">{t('nav.cart')}</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="font-bold mb-4">Follow Us</h4>
+            <h4 className="font-bold mb-4">{t('footer.follow_us')}</h4>
             <div className="flex gap-4 text-text-muted">
               <a href="#" className="hover:text-primary">Twitter</a>
               <a href="#" className="hover:text-primary">Instagram</a>
@@ -35,7 +38,7 @@ const Layout = ({ children }) => {
           </div>
         </div>
         <div className="container border-t border-glass-border mt-12 pt-8 text-center text-text-muted text-sm">
-          &copy; {new Date().getFullYear()} ToktokStore. Built with Premium Taste.
+          {t('footer.copyright').replace('{year}', new Date().getFullYear())}
         </div>
       </footer>
     </div>

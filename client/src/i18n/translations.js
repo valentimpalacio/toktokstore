@@ -123,6 +123,12 @@ export const translations = {
       out_of_stock: "Out of stock",
       details: "View Details",
       buy: "Buy"
+    },
+    footer: {
+      desc: "Discover the next generation of electronics with our curated selection of premium gadgets and tech.",
+      quick_links: "Quick Links",
+      follow_us: "Follow Us",
+      copyright: "© {year} ToktokStore. Built with Premium Taste."
     }
   },
   pt: {
@@ -249,6 +255,12 @@ export const translations = {
       out_of_stock: "Fora de estoque",
       details: "Ver Detalhes",
       buy: "Comprar"
+    },
+    footer: {
+      desc: "Descubra a próxima geração de eletrônicos com nossa seleção curada de gadgets e tecnologia premium.",
+      quick_links: "Links Rápidos",
+      follow_us: "Siga-nos",
+      copyright: "© {year} ToktokStore. Feito com Gosto Premium."
     }
   },
   es: {
@@ -375,6 +387,12 @@ export const translations = {
       out_of_stock: "Agotado",
       details: "Ver Detalles",
       buy: "Comprar"
+    },
+    footer: {
+      desc: "Descubre la próxima generación de electrónica con nuestra selección curada de gadgets y tecnología premium.",
+      quick_links: "Enlaces Rápidos",
+      follow_us: "Síguenos",
+      copyright: "© {year} ToktokStore. Hecho con Gusto Premium."
     }
   }
 };

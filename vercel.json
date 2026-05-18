@@ -10,10 +10,7 @@
     },
     {
       "src": "api/index.js",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": ["server/**"]
-      }
+      "use": "@vercel/node"
     }
   ],
   "routes": [
@@ -28,10 +25,5 @@
   ],
   "env": {
     "NODE_ENV": "production"
-  },
-  "build": {
-    "env": {
-      "NODE_ENV": "production"
-    }
   }
 }

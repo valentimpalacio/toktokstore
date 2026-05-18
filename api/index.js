@@ -24,13 +24,13 @@ app.use(cors({
 app.use(express.json());
 
 // Routes
-const authRoutes = require('../server/src/routes/auth.routes');
-const productRoutes = require('../server/src/routes/product.routes');
-const orderRoutes = require('../server/src/routes/order.routes');
-const ratingRoutes = require('../server/src/routes/rating.routes');
-const wishlistRoutes = require('../server/src/routes/wishlist.routes');
-const couponRoutes = require('../server/src/routes/coupon.routes');
-const adminRoutes = require('../server/src/routes/admin.routes');
+const authRoutes = require('./src/routes/auth.routes');
+const productRoutes = require('./src/routes/product.routes');
+const orderRoutes = require('./src/routes/order.routes');
+const ratingRoutes = require('./src/routes/rating.routes');
+const wishlistRoutes = require('./src/routes/wishlist.routes');
+const couponRoutes = require('./src/routes/coupon.routes');
+const adminRoutes = require('./src/routes/admin.routes');
 
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);

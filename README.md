@@ -2,6 +2,8 @@
 
 Um e-commerce completo e profissional construído com React, Node.js, Express e PostgreSQL, com foco em escalabilidade e manutenibilidade.
 
+🌐 **Demo ao vivo:** [https://toktokstore.vercel.app](https://toktokstore.vercel.app)
+
 ## 📸 Screenshots
 
 ### Home Page

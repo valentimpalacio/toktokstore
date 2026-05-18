@@ -1,4 +1,3 @@
-const serverless = require('serverless-http');
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
@@ -75,11 +74,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Graceful shutdown
-process.on('SIGTERM', () => {
-  prisma.$disconnect();
-});
-
-// Export for Vercel serverless
-module.exports = app;
-module.exports.handler = serverless(app);
+// Vercel serverless export
+module.exports = async (req, res) => {
+  return app(req, res);
+};

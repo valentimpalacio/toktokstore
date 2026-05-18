@@ -98,45 +98,34 @@ app.use((req, res) => {
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
-const server = app.listen(PORT, () => {
-  logger.info(`Server running on port ${PORT}`, {
-    environment: process.env.NODE_ENV || 'development',
-    timestamp: new Date().toISOString()
-  });
-});
 
-// Graceful shutdown
-process.on('SIGTERM', () => {
-  logger.info('SIGTERM received, shutting down gracefully...');
-  server.close(() => {
-    logger.info('Server closed');
-    prisma.$disconnect();
-    process.exit(0);
+// Only start server if not running in serverless mode
+if (process.env.VERCEL !== '1' && !module.parent) {
+  const server = app.listen(PORT, () => {
+    logger.info(`Server running on port ${PORT}`, {
+      environment: process.env.NODE_ENV || 'development',
+      timestamp: new Date().toISOString()
+    });
   });
-});
 
-process.on('SIGINT', () => {
-  logger.info('SIGINT received, shutting down gracefully...');
-  server.close(() => {
-    logger.info('Server closed');
-    prisma.$disconnect();
-    process.exit(0);
+  // Graceful shutdown
+  process.on('SIGTERM', () => {
+    logger.info('SIGTERM received, shutting down gracefully...');
+    server.close(() => {
+      logger.info('Server closed');
+      prisma.$disconnect();
+      process.exit(0);
+    });
   });
-});
 
-process.on('unhandledRejection', (reason, promise) => {
-  logger.error('Unhandled Rejection at:', {
-    promise: promise.toString(),
-    reason: reason
+  process.on('SIGINT', () => {
+    logger.info('SIGINT received, shutting down gracefully...');
+    server.close(() => {
+      logger.info('Server closed');
+      prisma.$disconnect();
+      process.exit(0);
+    });
   });
-});
-
-process.on('uncaughtException', (error) => {
-  logger.error('Uncaught Exception:', {
-    error: error.message,
-    stack: error.stack
-  });
-  process.exit(1);
-});
+}
 
 module.exports = { app, prisma };

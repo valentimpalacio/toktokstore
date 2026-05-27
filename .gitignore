@@ -8,6 +8,7 @@ dist/
 build/
 coverage/
 .vscode/
+AGENTS.md
 .idea/
 .DS_Store
 *.tsbuildinfo
